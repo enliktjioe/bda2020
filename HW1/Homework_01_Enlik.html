@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Homework_01</title>
+<title>Homework_01_Enlik</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13115,7 +13115,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remove future warning message</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
 </pre></div>
 
@@ -14710,7 +14711,7 @@ Hint 1: The extension of the filename may not always reflect the structure of da
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11d428d90&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1266df510&gt;</pre>
 </div>
 
 </div>
@@ -15128,16 +15129,12 @@ Percentage of missing values in attribute native.country = 1.79%
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # TODO</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO</span>
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;O&#39;</span> <span class="p">:</span> <span class="c1">#dtype == &#39;O&#39; stands for Python object</span>
+    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;O&#39;</span> <span class="p">:</span> <span class="c1">#dtype == &#39;O&#39; stands for Python object, to check if data type is string or not</span>
         <span class="n">data</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<span class="c1">#         print(data)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;column </span><span class="si">{column}</span><span class="s2"> is not string&quot;</span><span class="p">)</span>
-
-<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="c1"># data[&#39;age&#39;].dtype</span>
 </pre></div>
 
     </div>
@@ -15161,143 +15158,6 @@ column male is not string
 column female is not string
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>age</th>
-      <th>workclass</th>
-      <th>education</th>
-      <th>occupation</th>
-      <th>capital.gain</th>
-      <th>capital.loss</th>
-      <th>native.country</th>
-      <th>salaries</th>
-      <th>jobsatisfaction</th>
-      <th>male</th>
-      <th>female</th>
-      <th>gender</th>
-    </tr>
-    <tr>
-      <th>X</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>39</td>
-      <td>State-gov</td>
-      <td>Bachelors</td>
-      <td>Adm-clerical</td>
-      <td>2174</td>
-      <td>0</td>
-      <td>United-States</td>
-      <td>43136.0</td>
-      <td>0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>50</td>
-      <td>Self-emp-not-inc</td>
-      <td>Bachelors</td>
-      <td>Exec-managerial</td>
-      <td>0</td>
-      <td>0</td>
-      <td>UnitedStates</td>
-      <td>46209.0</td>
-      <td>7</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>38</td>
-      <td>privat</td>
-      <td>HS-grad</td>
-      <td>Handlers-cleaners</td>
-      <td>0</td>
-      <td>0</td>
-      <td>United-States</td>
-      <td>28937.0</td>
-      <td>6</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>53</td>
-      <td>privat</td>
-      <td>11th</td>
-      <td>Handlers-cleaners</td>
-      <td>0</td>
-      <td>0</td>
-      <td>United-States</td>
-      <td>33658.0</td>
-      <td>6</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>28</td>
-      <td>privat</td>
-      <td>Bachelors</td>
-      <td>Prof-specialty</td>
-      <td>0</td>
-      <td>0</td>
-      <td>Cuba</td>
-      <td>34372.0</td>
-      <td>12</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>Female</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -15371,10 +15231,6 @@ column female is not string
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO</span>
 <span class="n">data_clean</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="s1">&#39;privat&#39;</span><span class="p">,</span><span class="s1">&#39;UnitedStates&#39;</span><span class="p">,</span> <span class="s1">&#39;Unitedstates&#39;</span><span class="p">,</span> <span class="s1">&#39;Hong&#39;</span><span class="p">],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="s1">&#39;Private&#39;</span><span class="p">,</span><span class="s1">&#39;United-States&#39;</span><span class="p">,</span> <span class="s1">&#39;United-States&#39;</span><span class="p">,</span> <span class="s1">&#39;Hong-Kong&#39;</span><span class="p">])</span>
 <span class="n">data_clean</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="c1"># To find unique value for every column in our dataframe</span>
-<span class="c1"># for column in data.columns:</span>
-<span class="c1">#     print(data[column].unique())</span>
 </pre></div>
 
     </div>
@@ -15711,17 +15567,6 @@ column female is not string
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
-<span class="c1"># data[&#39;education&#39;] = data[&#39;education&#39;].cat.reorder_categories([&#39;Doctorate&#39;, &#39;Masters&#39;, </span>
-<span class="c1">#                                           &#39;Bachelors&#39;, &#39;Some-college&#39;, &#39;Prof-school&#39;, &#39;Assoc-voc&#39;, &#39;Assoc-acdm&#39;,</span>
-<span class="c1">#                                           &#39;HS-grad&#39;, &#39;12th&#39;,</span>
-<span class="c1">#                                           &#39;11th&#39;, &#39;10th&#39;,</span>
-<span class="c1">#                                           &#39;9th&#39;, &#39;7th-8th&#39;,</span>
-<span class="c1">#                                           &#39;5th-6th&#39;, &#39;1st-4th&#39;,</span>
-<span class="c1">#                                           &#39;Preschool&#39;</span>
-<span class="c1">#                                          ], ordered = True)</span>
-
-<span class="c1"># data[&#39;education&#39;].unique().sum()</span>
-<span class="c1"># data[&#39;education&#39;].describe()</span>
 
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="s1">&#39;Doctorate&#39;</span><span class="p">,</span> <span class="s1">&#39;Masters&#39;</span><span class="p">,</span> 
                                           <span class="s1">&#39;Bachelors&#39;</span><span class="p">,</span> <span class="s1">&#39;Some-college&#39;</span><span class="p">,</span> <span class="s1">&#39;Prof-school&#39;</span><span class="p">,</span> <span class="s1">&#39;Assoc-voc&#39;</span><span class="p">,</span> <span class="s1">&#39;Assoc-acdm&#39;</span><span class="p">,</span>
@@ -15749,7 +15594,7 @@ column female is not string
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11df29b10&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x126bf8f90&gt;</pre>
 </div>
 
 </div>
@@ -16175,7 +16020,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">crosstab_df</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">crosstab_df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">crosstab_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
         <span class="n">row</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span> <span class="c1"># TODO </span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -16192,17 +16036,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>?
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16211,17 +16044,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 >
 </div>
 
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Adm-clerical
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -16244,17 +16066,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Armed-Forces
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16263,17 +16074,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 >
 </div>
 
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Craft-repair
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -16296,17 +16096,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Exec-managerial
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16315,17 +16104,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 >
 </div>
 
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Farming-fishing
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -16348,17 +16126,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Handlers-cleaners
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16367,17 +16134,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 >
 </div>
 
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Machine-op-inspct
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -16400,17 +16156,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Other-service
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16419,17 +16164,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 >
 </div>
 
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Priv-house-serv
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -16452,17 +16186,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Prof-specialty
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16471,17 +16194,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 >
 </div>
 
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Protective-serv
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -16504,17 +16216,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Sales
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16530,17 +16231,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Tech-support
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
@@ -16549,17 +16239,6 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 >
 </div>
 
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Transport-moving
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -16621,9 +16300,9 @@ Hint 1: You can use crosstab, see also aggfunc from the pandas documentation.</p
 </ul>
 <p><font color='red'> **Answer:**</font></p>
 <p><strong><font color='red'>(please change X in the next cell into your estimate)</font></strong></p>
-<p>6-7 hours</p>
+<p>10 hours</p>
 <h2 id="How-much-the-homework-is-difficult?">How much the homework is difficult?<a class="anchor-link" href="#How-much-the-homework-is-difficult?">&#182;</a></h2><p>you can put only number between $0:10$ ($0:$ easy, $10:$ difficult)</p>
-<p><font color='red'> **Answer: 8**</font></p>
+<p><font color='red'> **Answer: 6**</font></p>
 
 </div>
 </div>
