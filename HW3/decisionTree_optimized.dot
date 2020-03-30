@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="MonthlyIncome <= 3492.5\nentropy = 0.634\nsamples = 1176\nvalue = [988, 188]\nclass = y[0]", fillcolor="#ea995f"] ;
+1 [label="OverTime_No <= 0.5\nentropy = 0.851\nsamples = 390\nvalue = [282, 108]\nclass = y[0]", fillcolor="#efb185"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Age <= 30.5\nentropy = 0.994\nsamples = 106\nvalue = [48, 58]\nclass = y[1]", fillcolor="#ddeefb"] ;
+1 -> 2 ;
+3 [label="entropy = 0.835\nsamples = 49\nvalue = [13, 36]\nclass = y[1]", fillcolor="#80c0ee"] ;
+2 -> 3 ;
+4 [label="entropy = 0.962\nsamples = 57\nvalue = [35, 22]\nclass = y[0]", fillcolor="#f5d0b5"] ;
+2 -> 4 ;
+5 [label="YearsAtCompany <= 1.5\nentropy = 0.671\nsamples = 284\nvalue = [234, 50]\nclass = y[0]", fillcolor="#eb9c63"] ;
+1 -> 5 ;
+6 [label="entropy = 0.934\nsamples = 80\nvalue = [52, 28]\nclass = y[0]", fillcolor="#f3c5a4"] ;
+5 -> 6 ;
+7 [label="entropy = 0.493\nsamples = 204\nvalue = [182, 22]\nclass = y[0]", fillcolor="#e89051"] ;
+5 -> 7 ;
+8 [label="JobRole_Sales Executive <= 0.5\nentropy = 0.475\nsamples = 786\nvalue = [706, 80]\nclass = y[0]", fillcolor="#e88f4f"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="TotalWorkingYears <= 38.0\nentropy = 0.366\nsamples = 528\nvalue = [491, 37]\nclass = y[0]", fillcolor="#e78a48"] ;
+8 -> 9 ;
+10 [label="entropy = 0.353\nsamples = 526\nvalue = [491, 35]\nclass = y[0]", fillcolor="#e78a47"] ;
+9 -> 10 ;
+11 [label="entropy = 0.0\nsamples = 2\nvalue = [0, 2]\nclass = y[1]", fillcolor="#399de5"] ;
+9 -> 11 ;
+12 [label="DistanceFromHome <= 10.5\nentropy = 0.65\nsamples = 258\nvalue = [215, 43]\nclass = y[0]", fillcolor="#ea9a61"] ;
+8 -> 12 ;
+13 [label="entropy = 0.511\nsamples = 176\nvalue = [156, 20]\nclass = y[0]", fillcolor="#e89152"] ;
+12 -> 13 ;
+14 [label="entropy = 0.856\nsamples = 82\nvalue = [59, 23]\nclass = y[0]", fillcolor="#efb286"] ;
+12 -> 14 ;
+}
