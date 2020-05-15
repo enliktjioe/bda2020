@@ -1,0 +1,11 @@
+User_ID,First Name,Last Name,Age,Address,Accident_ID,ROLE
+1,Chester,Murphy,25,"Narva 108, Tartu",1,Driver
+2,Walter,Turner,26,"Tilgi 49, Tartu",2,Driver
+3,Daryl,Fowler,25,"Piik 67, Tartu",1,Driver
+4,Ted,Nelson,45,"Herne 20, Tartu",3,Driver
+5,Olivia,Crawford,38,"Kalevi 25, Tartu",2,Driver
+1,Chester,Murphy,25,"Narva 108, Tartu",2,Witness
+6,Amy,Miller,27,"Riia 408, Tartu",3,Driver
+7,Tes,Smith,25,"Narva 108, Tartu",4,Driver
+8,Josh,Blake,36,"Parnu 37, Tallin",4,Driver
+3,Daryl,Fowler,25,"Piik 67, Tartu",4,Witness

@@ -1,0 +1,5 @@
+Accident_ID,Location,CarID_1,CarID_2,DriverID_1,DriverID_2
+1,Tartu,1000,1001,1,3
+2,Tallin,1002,1003,2,5
+3,Tartu,1004,1005,4,6
+4,Tallin,1006,1007,7,8
